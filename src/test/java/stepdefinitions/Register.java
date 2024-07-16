@@ -1,5 +1,9 @@
-package tests;
+package stepdefinitions;
 
+import java.util.Map;
+
+import io.cucumber.datatable.DataTable;
+//import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 import io.cucumber.java.en.Given;
 
@@ -8,11 +12,49 @@ import io.cucumber.java.en.Given;
 
 public class Register {
 	
+	
+	//Multiple Hooks ## @after order -- 2,1,0
+	
+			/*
+			@Before (order=0)
+			public void setupOne() {
+				 System.out.println("++ setup one before hook method got executed ++");
+			 }
+			
+			@Before (order=1)
+			public void setupTwo() {
+				 System.out.println("++ setup two before hook method got executed ++");
+			 }
+			
+			@Before (order=2)
+			public void setupThree() {
+				 System.out.println("++ setup three before hook method got executed ++");
+			 }
+			
+			@After(order=2)
+			public void tearDownOne() {
+				 System.out.println("-- teardown one after hook method got executed ++");
+		
+			}
+			
+			@After (order=1)
+			public void tearDownTwo() {
+				 System.out.println("-- teardown two after hook method got executed ++");
+		
+			}
+			
+			@After(order=0)
+			public void tearDownThree() {
+				 System.out.println("-- teardown three after hook method got executed ++");
+		
+			}
+	*/
+	
 	@Given("User navigate to Register Account page")
 	public void User_navigate_to_Register_Account_page() {
 		System.out.println(" User got navigated to Register Account Page");
 	}
-
+/*
 	@When("User enters firstname {string} into the First Name field")
 	public void User_enters_firstname_into_the_First_Name_field(String firstNameText) {
 		System.out.println(" User has entered firstname: "+firstNameText+" into the firstname field ");		
@@ -42,7 +84,7 @@ public class Register {
 	public void enters_password_into_the_password_confirm_field(int passwordconfirmText) {
 		System.out.println(" User has entered confirm password : "+passwordconfirmText+" into the Password confirm field");		
 	}
-
+*/
 	@When("Selects Privarcy Policy field")
 	public void selects_privarcy_policy_field() {
 		System.out.println(" User has selected privacy policy field");		
@@ -77,5 +119,17 @@ public class Register {
 	public void warning_message_informing_the_user_about_duplicate_email_should_be_displayed() {
 		System.out.println("Warning message informing the user about duplicate email should be displayed ");
 	}
+	
+	@When("User enters below details into the fields")
+	public void User_enters_below_details_into_the_fields(DataTable datatable) {
+		Map<String, String> map = datatable.asMap(String.class, String.class);
+		System.out.println("User has entered the first name as  "+map.get("firstname"));
+		System.out.println("User has entered the last name as  "+map.get("lastname"));
+		System.out.println("User has entered the email address name as  "+map.get("email address"));
+		System.out.println("User has entered the telephone as  "+map.get("telephone"));
+		System.out.println("User has entered the password as  "+map.get("password"));
+		
+	}
+	
 	
 }

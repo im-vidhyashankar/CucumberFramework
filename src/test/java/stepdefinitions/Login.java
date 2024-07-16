@@ -1,8 +1,24 @@
-package tests;
+package stepdefinitions;
 
+//import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 
 public class Login {
+	
+	/*
+	@Before(order=0, value="@search") // Hooks and attribute : If we have to specify tags and order then use value 
+	public void  setup() {
+		System.out.println(" ++ before hook - setup methos got executed ++ ");
+	}
+	
+	@After("@search")
+	public void tearDown() {
+		System.out.println("-- after hook - teardown methos got executed -- ");
+	}
+	*/
+	
+	
+	
 	
 	@Given("^User navigates to login page$")
 	public void User_navigates_to_login_page() {
