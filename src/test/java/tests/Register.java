@@ -3,6 +3,9 @@ package tests;
 import io.cucumber.java.en.*;
 import io.cucumber.java.en.Given;
 
+//@author - Vidhya Shankar
+
+
 public class Register {
 	
 	@Given("User navigate to Register Account page")
@@ -73,7 +76,6 @@ public class Register {
 	@Then("Warning message informing the user about duplicate email should be displayed")
 	public void warning_message_informing_the_user_about_duplicate_email_should_be_displayed() {
 		System.out.println("Warning message informing the user about duplicate email should be displayed ");
-
 	}
 	
 }
