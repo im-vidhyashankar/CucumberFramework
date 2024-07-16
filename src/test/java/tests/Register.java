@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 
 public class Register {
 	
-	@Given("^User navigate to Register Account page$")
+	@Given("User navigate to Register Account page")
 	public void User_navigate_to_Register_Account_page() {
 		System.out.println(" User got navigated to Register Account Page");
 	}
@@ -21,22 +21,22 @@ public class Register {
 	}
 
 	@And("Enters email address {string} into the Email field")
-	public void enters_email_address_into_the_email_field(String emailText) {
-		System.out.println(" User has entered email address: "+emailText+" into the email address field");		
+	public void enters_email_address_into_the_email_field(String emailAddress) {
+		System.out.println(" User has entered email address: "+emailAddress+" into the email address field");		
 	}
 
-	@And("Enters telephone {string} into the Telephone field")
-	public void enters_telephone_into_the_telephone_field(String telephoneText) {
-		System.out.println(" User has entered Telephone number : "+telephoneText+" into the telephone field");		
+	@And("Enters telephone {int} into the Telephone field")
+	public void enters_telephone_into_the_telephone_field(int telephoneNumber) {
+		System.out.println(" User has entered Telephone number : "+telephoneNumber+" into the telephone field");		
 	}
 
-	@And("Enters password {string} into the Password field")
-	public void enters_password_into_the_password_field(String passwordText) {
-		System.out.println(" User has entered password : "+passwordText+" into the Password field");		
+	@And("Enters password {int} into the Password field")
+	public void enters_password_into_the_password_field(int password) {
+		System.out.println(" User has entered password : "+password+" into the Password field");		
 	}
 
-	@And("Enters password {string} into the Password confirm field")
-	public void enters_password_into_the_password_confirm_field(String passwordconfirmText) {
+	@And("Enters password {int} into the Password confirm field")
+	public void enters_password_into_the_password_confirm_field(int passwordconfirmText) {
 		System.out.println(" User has entered confirm password : "+passwordconfirmText+" into the Password confirm field");		
 	}
 
